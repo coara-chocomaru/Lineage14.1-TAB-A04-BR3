@@ -375,7 +375,6 @@ service bugreport /system/bin/dumpstate -d -p -B \
 # start ged_srv
 on property:sys.boot_completed=1
     start ged_srv
-    exec /system/bin/settings put global captive_portal_detection_enabled 0
     exec u:r:shell:s0 -- /system/bin/settings put global captive_portal_detection_enabled 0
 
 service ged_srv /vendor/bin/ged_srv
