@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <bool name="doze_proximity_check_before_pulse">false</bool>
+   <bool name="config_keyguardShowCameraAffordance">false</bool>
+   <bool name="config_hspa_data_distinguishable">false</bool>
+   <integer name="touch_acceptance_delay">500</integer>
+</resources>

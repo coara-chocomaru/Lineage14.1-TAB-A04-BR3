@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="config_enable_dialer_key_vibration">false</bool>
+    <bool name="config_apn_expand">false</bool>
+    <bool name="config_additional_call_setting">false</bool>
+    <bool name="allow_visual_voicemail">false</bool>
+    <bool name="config_pstn_phone_accounts_enabled">false</bool>
+    <bool name="config_xdivert_enable">false</bool>
+    <bool name="config_operator_selection_expand">false</bool>
+    <bool name="config_prefer_2g">false</bool>
+</resources>
+
