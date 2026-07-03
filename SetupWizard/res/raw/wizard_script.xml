@@ -39,7 +39,13 @@
         <result wizard:action="flow_choice" />
     </WizardAction>
     <WizardAction wizard:uri="intent:#Intent;action=com.android.setupwizard.FLOW_CHOICE;end" id="flow_choice">
-        <result wizard:resultCode="1" wizard:action="oem_post_setup" wizard:name="skip" />
+        <result wizard:resultCode="1" wizard:action="setup_as_new_flow" wizard:name="skip" />
+        <result wizard:action="restore_flow" />
+    </WizardAction>
+    <WizardAction wizard:script="android.resource://com.google.android.setupwizard/xml/wizard_script_restore_flow" id="restore_flow">
+        <result wizard:action="oem_post_setup" />
+    </WizardAction>
+    <WizardAction wizard:script="android.resource://com.google.android.setupwizard/xml/wizard_script_setup_as_new_flow" id="setup_as_new_flow">
         <result wizard:action="oem_post_setup" />
     </WizardAction>
     <WizardAction wizard:uri="intent:#Intent;action=com.cyanogenmod.setupwizard.LINEAGE_SETTINGS;end" id="oem_post_setup">
