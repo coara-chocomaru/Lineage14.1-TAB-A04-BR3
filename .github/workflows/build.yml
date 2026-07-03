@@ -125,7 +125,7 @@ jobs:
         working-directory: workspace
         run: |
             rm -rf packages/apps/SetupWizard
-            mv device/sts/a04br3/SetupWizard packages/apps/ || true
+            mv device/sts/a04br3/SetupWizard packages/apps/
             rm -rf device/sts/a04br3/SetupWizard || true
             
       - name: Switch to Python 2
