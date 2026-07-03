@@ -120,7 +120,14 @@ jobs:
         uses: pierotofy/set-swap-space@master
         with:
           swap-size-gb: 12
-
+          
+      - name: Apply SetupWizard Folder Patch
+        working-directory: workspace
+        run: |
+            rm -rf packages/apps/SetupWizard
+            mv device/sts/a04br3/SetupWizard packages/apps/ || true
+            rm -rf device/sts/a04br3/SetupWizard || true
+            
       - name: Switch to Python 2
         run: |
           sudo apt -y install python2
@@ -190,13 +197,7 @@ jobs:
           cat "${DEX2OAT_BIN}"
           echo "timestamps:"
           ls -la "${DEX2OAT_BIN}" "${DEX2OAT_REAL}"
-      
-      - name: Apply SetupWizard Folder Patch
-        working-directory: workspace
-        run: |
-            rm -rf packages/apps/SetupWizard
-            mv device/sts/a04br3/SetupWizard packages/apps/ || true
-            
+                  
       - name: Clone kernel source
         run: |
             git clone --depth=1 -b main https://github.com/coara-chocomaru/android_kernel_sts_a04br3-test workspace/kernel/sts/a04br3
