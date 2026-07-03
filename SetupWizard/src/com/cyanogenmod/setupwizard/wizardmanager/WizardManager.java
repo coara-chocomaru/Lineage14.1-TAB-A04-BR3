@@ -101,18 +101,15 @@ public class WizardManager extends Activity {
 
         addExtras(intent);
         
-        // WizardBundle を明示的に追加（Google SetupWizard 対応）
-        // extras から wizard_bundle を抽出して渡す
-        if(extras != null) {
+        if (extras != null) {
             intent.putExtras(extras);
-            
-            // Google SetupWizard の WizardManagerActivity へ遷移する場合、
-            // wizard_bundle extra を確認して明示的に渡す
-            if (extras.containsKey("wizard_bundle")) {
-                Bundle wizardBundle = extras.getBundle("wizard_bundle");
+
+            Bundle extrasBundle = extras.getExtras();
+            if (extrasBundle != null && extrasBundle.containsKey("wizard_bundle")) {
+                Bundle wizardBundle = extrasBundle.getBundle("wizard_bundle");
                 if (wizardBundle != null) {
                     intent.putExtra("wizard_bundle", wizardBundle);
-                    if(LOGV) {
+                    if (LOGV) {
                         Log.v(TAG, "doAction: Added wizard_bundle to intent");
                     }
                 }
