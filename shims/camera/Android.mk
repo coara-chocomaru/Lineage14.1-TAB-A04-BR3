@@ -25,8 +25,8 @@ LOCAL_PROPRIETARY_MODULE := true
 LOCAL_MULTILIB := both
 include $(BUILD_SHARED_LIBRARY)
 
-CAM_UTILS_SRC_32 := $(LOCAL_PATH)/../../proprietary/vendor/lib/libcam_utils.so
-CAM_UTILS_SRC_64 := $(LOCAL_PATH)/../../proprietary/vendor/lib64/libcam_utils.so
+CAM_UTILS_SRC_32 := vendor/sts/a04br3/proprietary/vendor/lib/libcam_utils.so
+CAM_UTILS_SRC_64 := vendor/sts/a04br3/proprietary/vendor/lib64/libcam_utils.so
 
 CAM_UTILS_OUT_32 := $(TARGET_OUT_VENDOR)/lib/libcam_utils.so
 CAM_UTILS_OUT_64 := $(TARGET_OUT_VENDOR)/lib64/libcam_utils.so
