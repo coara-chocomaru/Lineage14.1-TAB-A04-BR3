@@ -133,7 +133,32 @@ jobs:
           sudo apt -y install python2
           sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 1
           python --version
-
+          
+      - name: Remove unwanted apps and sounds before build
+        working-directory: workspace
+        run: |
+         echo "Removing apps..."
+         rm -rf packages/apps/Calendar
+         rm -rf packages/apps/Camera2
+         rm -rf packages/apps/DeskClock
+         rm -rf packages/apps/Email
+         rm -rf packages/apps/ExactCalculator
+         rm -rf packages/apps/Jelly
+         rm -rf packages/inputmethods/LatinIME
+         rm -rf packages/apps/LockClock
+         rm -rf packages/apps/WallpaperPicker
+         rm -rf packages/apps/AudioFX
+         rm -rf packages/apps/Contacts
+         rm -rf packages/apps/Eleven
+         rm -rf packages/apps/Gallery2
+         rm -rf packages/apps/Recorder
+         rm -rf packages/apps/Trebuchet
+         echo "Removing sound files..."
+         rm -rf frameworks/base/data/sounds/Alarms
+         rm -rf frameworks/base/data/sounds/Notifications
+         rm -rf frameworks/base/data/sounds/Ringtones
+         rm -rf frameworks/base/data/sounds/effects
+          
       - name: Build mmap_fix preload library
         run: |
           cat > /tmp/mmap_fix.c << 'CSRC'
