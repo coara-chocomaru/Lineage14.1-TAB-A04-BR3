@@ -144,15 +144,6 @@ jobs:
           sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 1
           python --version
           
-      - name: Remove unwanted apps and sounds before build
-        working-directory: workspace
-        run: |
-         echo "Removing sound files..."
-         rm -rf frameworks/base/data/sounds/Alarms
-         rm -rf frameworks/base/data/sounds/Notifications
-         rm -rf frameworks/base/data/sounds/Ringtones
-         rm -rf frameworks/base/data/sounds/effects
-          
       - name: Build mmap_fix preload library
         run: |
           cat > /tmp/mmap_fix.c << 'CSRC'
