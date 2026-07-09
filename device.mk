@@ -136,7 +136,9 @@ PRODUCT_PACKAGES += \
     libion
 
 PRODUCT_PACKAGES += \
-    com.android.future.usb.accessory
+    com.android.future.usb.accessory \
+    libshim_gui3 \
+    libshim_camera_metadata
 
 PRODUCT_PACKAGES += \
     e2fsck \
