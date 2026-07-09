@@ -18,22 +18,3 @@ PRODUCT_PACKAGES := $(filter-out com.android.email, $(PRODUCT_PACKAGES))
 PRODUCT_PACKAGES := $(filter-out com.android.exchange, $(PRODUCT_PACKAGES))
 PRODUCT_PACKAGES := $(filter-out com.android.camera2, $(PRODUCT_PACKAGES))
 PRODUCT_PACKAGES := $(filter-out com.android.providers.blockednumber, $(PRODUCT_PACKAGES))
-
-# REMOVE_APPS += \
-    Calendar \
-    Camera2 \
-    DeskClock \
-    Email \
-    ExactCalculator \
-    Jelly \
-    LatinIME \
-    LockClock \
-    WallpaperPicker \
-    AudioFX \
-    Contacts \
-    Eleven \
-    Gallery2 \
-    Recorder \
-    Trebuchet
-
-# PRODUCT_PACKAGES := $(filter-out $(REMOVE_APPS), $(PRODUCT_PACKAGES))
