@@ -166,7 +166,6 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml
 
 PRODUCT_PACKAGES += \
-    framework-res \
     com.google.android.media.effects \
     GoogleServicesFramework \
     GmsCore \
