@@ -160,13 +160,38 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml
 
 PRODUCT_PACKAGES += \
+    framework-res \
     com.google.android.media.effects \
     GoogleServicesFramework \
     GmsCore \
+    Velvet \
+    SettingsProvider \
+    NexusLauncher \
+    HelpRtc \
+    DynamiteModulesA \
+    DynamiteModulesB \
+    DynamiteModulesC \
     Phonesky \
     GoogleCalendarSyncAdapter \
     GoogleExtShared \
+    CalculatorGoogle \
+    CalendarGoogle \
+    Chrome \
+    GoogleCamera \
+    LatinIMEGoogle \
+    NexusWallpaper \
+    Photos \
+    PlayAutoInstallConfig \
+    DeskClockGoogle \
+    Gmail \
+    WallpaperPickerGoogle \
+    WallpapersBReel \
+    WallpapersUsTwo \
     GoogleContactsSyncAdapter \
+    GoogleContacts \
+    GoogleBackupTransport \
+    GCS \
+    DocumentsUI \
     GooglePartnerSetup \
     SetupWizard \
     GoogleOneTimeInitializer \
