@@ -18,7 +18,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
-PRODUCT_REMOVE_PACKAGES += \
+REMOVE_APPS += \
     Calendar \
     Camera2 \
     DeskClock \
@@ -35,6 +35,7 @@ PRODUCT_REMOVE_PACKAGES += \
     Recorder \
     Trebuchet
 
+PRODUCT_PACKAGES := $(filter-out $(REMOVE_APPS), $(PRODUCT_PACKAGES))
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0 \
