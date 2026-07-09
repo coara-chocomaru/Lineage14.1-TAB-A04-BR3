@@ -1,7 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := libshim_pt3
+LOCAL_MODULE := libshim_mt8167compat
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := \
     GraphicBufferShim.cpp \
