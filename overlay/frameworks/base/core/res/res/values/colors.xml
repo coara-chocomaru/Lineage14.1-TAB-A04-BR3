@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
     <color name="user_icon_1">#ff5e97f6</color>
     <color name="user_icon_2">#ff5c6bc0</color>
     <color name="user_icon_3">#ff26a69a</color>
@@ -10,3 +12,4 @@
     <color name="accent_device_default_light">#ff4285f4</color>
     <color name="accent_device_default_dark">#ff5e97f6</color>
     <color name="accent_device_default_50">#ffe8f0fe</color>
+</resources>
