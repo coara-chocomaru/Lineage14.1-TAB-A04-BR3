@@ -145,7 +145,7 @@ ADDITIONAL_BUILD_PROPERTIES += \
     ro.sys.sdcardfs=1 \
     persist.sys.timezone=Asia/Tokyo
 
-PRODUCT_PACKAGES += \
+# PRODUCT_PACKAGES += \
     LatinIME
 
 PRODUCT_PACKAGES += \
