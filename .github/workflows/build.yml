@@ -126,25 +126,6 @@ jobs:
            echo "Chrome APK placed successfully:"
            chmod 644 vendor/sts/a04br3/proprietary/app/Chrome/Chrome.apk
 
-      - name: Remove unwanted apps and sounds before build
-        working-directory: workspace
-        run: |
-         echo "Removing apps..."
-         rm -rf packages/apps/Calendar
-         rm -rf packages/apps/Camera2
-         rm -rf packages/apps/DeskClock
-         rm -rf packages/apps/ExactCalculator
-         rm -rf packages/apps/Jelly
-         rm -rf packages/inputmethods/LatinIME
-         rm -rf packages/apps/LockClock
-         rm -rf packages/apps/WallpaperPicker
-         rm -rf packages/apps/AudioFX
-         rm -rf packages/apps/Contacts
-         rm -rf packages/apps/Eleven
-         rm -rf packages/apps/Gallery2
-         rm -rf packages/apps/Recorder
-         rm -rf packages/apps/Trebuchet
-
       - name: Set Swap Space
         uses: pierotofy/set-swap-space@master
         with:
