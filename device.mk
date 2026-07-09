@@ -144,6 +144,12 @@ PRODUCT_PACKAGES += \
     mkfs.f2fs \
     make_ext4fs
 
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/media/bootanimation.zip
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/bootanimation.zip:system/media/bootanimation.zip
+
 #zram test
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/zm:system/bin/zm
