@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <bool name="config_useRoundIcon">true</bool>
     <bool name="config_dontPreferApn">false</bool>
     <bool name="config_supportDoubleTapWake">false</bool> 
     <bool name="config_dreamsEnabledByDefault">false</bool>
