@@ -171,7 +171,8 @@ PRODUCT_PACKAGES += \
     SetupWizard \
     GoogleOneTimeInitializer \
     ConfigUpdater \
-    GoogleLoginService
+    GoogleLoginService \
+    MtKCamera
 
 PRODUCT_PACKAGES += \
     fstab.mt8167 \
