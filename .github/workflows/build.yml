@@ -151,7 +151,6 @@ jobs:
          rm -rf packages/apps/Calendar
          rm -rf packages/apps/Camera2
          rm -rf packages/apps/DeskClock
-         rm -rf packages/apps/Email
          rm -rf packages/apps/ExactCalculator
          rm -rf packages/apps/Jelly
          rm -rf packages/inputmethods/LatinIME
