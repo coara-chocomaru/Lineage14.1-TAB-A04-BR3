@@ -78,8 +78,8 @@ jobs:
           cat << 'EOF' > workspace/.repo/local_manifests/roomservice.xml
           <?xml version="1.0" encoding="UTF-8"?>
           <manifest>
-              <project name="coara-chocomaru/Lineage14.1-TAB-A04-BR3" path="device/sts/a04br3" remote="github" revision="main" />
-              <project name="coara-chocomaru/a04br3-vendor" path="vendor/sts/a04br3" remote="github" revision="main3" />
+              <project name="coara-chocomaru/Lineage14.1-TAB-A04-BR3" path="device/sts/a04br3" remote="github" revision="test" />
+              <project name="coara-chocomaru/a04br3-vendor" path="vendor/sts/a04br3" remote="github" revision="test" />
           </manifest>
           EOF
 
@@ -115,6 +115,16 @@ jobs:
           fi
           echo "WebView APK verified successfully."
           ls -lh "$APK"
+
+      - name: Download and Place Chrome APK
+        working-directory: workspace
+        run: |
+           mkdir -p vendor/sts/a04br3/proprietary/app/Chrome
+           echo "Downloading Chrome.apk..."
+           curl -L -o vendor/sts/a04br3/proprietary/app/Chrome/Chrome.apk \
+           https://github.com/coara-chocomaru/Lineage14.1-TAB-A04-BR3/releases/download/c/Chrome.apk
+           echo "Chrome APK placed successfully:"
+           chmod 644 vendor/sts/a04br3/proprietary/app/Chrome/Chrome.apk
 
       - name: Set Swap Space
         uses: pierotofy/set-swap-space@master
