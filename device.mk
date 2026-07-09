@@ -137,8 +137,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory \
-    libshim_gui3 \
-    libshim_camera_metadata
+    libshim_mt8167compat
 
 PRODUCT_PACKAGES += \
     e2fsck \
