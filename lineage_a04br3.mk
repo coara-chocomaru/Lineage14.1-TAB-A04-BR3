@@ -13,7 +13,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, device/sts/a04br3/device.mk)
 
-# Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := a04br3
 PRODUCT_NAME := lineage_a04br3
 PRODUCT_RELEASE_NAME := PixelTouch_3
@@ -31,7 +30,6 @@ TARGET_SCREEN_HEIGHT := 800
 PRODUCT_RESTRICT_VENDOR_FILES := false
 TEMPORARY_DISABLE_PATH_RESTRICTIONS := true
 
-# === Pixel sailfish (Nexus 6P) 偽装 ===
 PRODUCT_BUILD_PROP_OVERRIDES += \
     ro.build.display.id=pixeltouch_nautilus-v1.0.0-20260709-v8 \
     ro.build.flavor=sailfish-user \
@@ -42,6 +40,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     ro.build.type=user \
     ro.build.tags=release-keys \
     ro.build.user=android-build \
+    ro.product.model=PixelTouch_3 \
     ro.build.host=wphr1.hot.corp.google.com
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
