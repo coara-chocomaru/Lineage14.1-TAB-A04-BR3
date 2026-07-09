@@ -19,7 +19,7 @@ PRODUCT_PACKAGES := $(filter-out com.android.exchange, $(PRODUCT_PACKAGES))
 PRODUCT_PACKAGES := $(filter-out com.android.camera2, $(PRODUCT_PACKAGES))
 PRODUCT_PACKAGES := $(filter-out com.android.providers.blockednumber, $(PRODUCT_PACKAGES))
 
-REMOVE_APPS += \
+# REMOVE_APPS += \
     Calendar \
     Camera2 \
     DeskClock \
@@ -36,4 +36,4 @@ REMOVE_APPS += \
     Recorder \
     Trebuchet
 
-PRODUCT_PACKAGES := $(filter-out $(REMOVE_APPS), $(PRODUCT_PACKAGES))
+# PRODUCT_PACKAGES := $(filter-out $(REMOVE_APPS), $(PRODUCT_PACKAGES))
