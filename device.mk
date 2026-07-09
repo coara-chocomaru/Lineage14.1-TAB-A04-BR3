@@ -170,7 +170,7 @@ PRODUCT_PACKAGES += \
     GoogleServicesFramework \
     GmsCore \
     Velvet \
-    SettingsProvider \
+    SettingsProvidercustom \
     NexusLauncher \
     HelpRtc \
     DynamiteModulesA \
@@ -196,7 +196,7 @@ PRODUCT_PACKAGES += \
     GoogleContacts \
     GoogleBackupTransport \
     GCS \
-    DocumentsUI \
+    DocumentsUI3 \
     GooglePartnerSetup \
     SetupWizard \
     GoogleOneTimeInitializer \
