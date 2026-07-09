@@ -1,5 +1,5 @@
-
 import common
+
 def FullOTA_InstallEnd(info):
     OTA_InstallEnd(info, info.input_zip)
 
@@ -7,14 +7,15 @@ def IncrementalOTA_InstallEnd(info):
     OTA_InstallEnd(info, info.target_zip)
 
 def AddImage(info, input_zip, basename, dest):
-    path = "IMAGES/" + basename
+    path = "RADIO/" + basename
     if path not in input_zip.namelist():
         print("Warning: %s not found in target_files; skipping" % path)
         return
-
     data = input_zip.read(path)
     common.ZipWriteStr(info.output_zip, basename, data)
-    info.script.AppendExtra('package_extract_file("%s", "%s");' % (basename, dest))
+    tmp = "/tmp/" + basename
+    info.script.AppendExtra('package_extract_file("%s", "%s");' % (basename, tmp))
+    info.script.AppendExtra('write_raw_image("%s", "%s");' % (tmp, dest))
 
 def OTA_InstallEnd(info, input_zip):
     info.script.Print("Patching firmware images...")
