@@ -1,5 +1,3 @@
-#define LOG_TAG "libshim_mt8167compat_gui"
-
 #include <ui/GraphicBuffer.h>
 #include <utils/Log.h>
 #include <string>
