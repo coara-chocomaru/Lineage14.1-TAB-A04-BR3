@@ -31,7 +31,21 @@ TARGET_SCREEN_HEIGHT := 800
 PRODUCT_RESTRICT_VENDOR_FILES := false
 TEMPORARY_DISABLE_PATH_RESTRICTIONS := true
 
+# === Pixel sailfish (Nexus 6P) 偽装 ===
 PRODUCT_BUILD_PROP_OVERRIDES += \
+    ro.build.display.id=pixeltouch_nautilus-v1.0.0-20260709-v8 \
+    ro.build.flavor=sailfish-user \
+    ro.product.name=sailfish \
+    ro.product.device=sailfish \
+    ro.product.board=sailfish \
+    ro.build.product=sailfish \
+    ro.build.type=user \
+    ro.build.tags=release-keys \
+    ro.build.user=android-build \
+    ro.build.host=wphr1.hot.corp.google.com
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    ro.build.fingerprint=google/sailfish/sailfish:7.1.2/NJH47F/4146041:user/release-keys \
     PRIVATE_BUILD_DESC="sailfish-user 7.1.2 NJH47F 4146041 release-keys"
 
 BUILD_FINGERPRINT := google/sailfish/sailfish:7.1.2/NJH47F/4146041:user/release-keys
