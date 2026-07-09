@@ -34,7 +34,6 @@ include $(BUILD_SHARED_LIBRARY)
 SHIM_VERIFY_STAMP := $(intermediates)/shim_verify.stamp
 
 $(SHIM_VERIFY_STAMP): $(LOCAL_BUILT_MODULE)
-	$(hide) echo "[shim-verify] checking exported symbols in $<"
 	$(hide) nm -D $< | grep -q "T _ZN7android13GraphicBufferC1Ejjij" \
 		|| (echo "FATAL: GraphicBuffer ctor symbol not exported as T" && exit 1)
 	$(hide) nm -D $< | grep -q "T _ZN7android14CameraMetadata14getTagFromNameEPKcPKNS_19VendorTagDescriptorEPj" \
@@ -57,7 +56,6 @@ $(hide) patchelf --add-needed libshim_mt8167compat.so $(2).tmp
 $(hide) readelf -d $(2).tmp | grep -q libshim_mt8167compat.so \
 	|| (echo "FATAL: patchelf did not add NEEDED entry to $(2)" && exit 1)
 $(hide) mv -f $(2).tmp $(2)
-$(hide) echo "[shim] patched $(2) with libshim_mt8167compat.so"
 endef
 
 ifneq ($(wildcard $(CAM_UTILS_SRC_32)),)
