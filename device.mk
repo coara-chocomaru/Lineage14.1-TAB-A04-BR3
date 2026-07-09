@@ -24,6 +24,7 @@ REMOVE_APPS += \
     DeskClock \
     Email \
     ExactCalculator \
+    Calculator \
     Jelly \
     LatinIME \
     LockClock \
