@@ -54,16 +54,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.country=JP \
     ro.radio.noril=1 \
     config.disable_telephony=true \
-    keyguard.no_require_sim=true
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    ro.build.flavor=sailfish-user \
-    ro.product.name=sailfish \
-    ro.product.device=sailfish \
-    ro.product.board=sailfish \
-    ro.build.product=sailfish \
-    ro.build.tags=release-keys \
-    ro.product.model=PixelTouch_3 \
+    keyguard.no_require_sim=true \
     ro.com.google.ime.theme_id=5
 
 ADDITIONAL_BUILD_PROPERTIES += \
