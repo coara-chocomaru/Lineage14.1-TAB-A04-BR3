@@ -31,20 +31,6 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 TEMPORARY_DISABLE_PATH_RESTRICTIONS := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    ro.build.display.id=pixeltouch_nautilus-v1.0.0-20260709-v8 \
-    ro.build.flavor=sailfish-user \
-    ro.product.name=sailfish \
-    ro.product.device=sailfish \
-    ro.product.board=sailfish \
-    ro.build.product=sailfish \
-    ro.build.type=user \
-    ro.build.tags=release-keys \
-    ro.build.user=android-build \
-    ro.product.model=PixelTouch_3 \
-    ro.build.host=wphr1.hot.corp.google.com \
-    ro.com.google.ime.theme_id=5
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="sailfish-user 7.1.2 NJH47F 4146041 release-keys"
 
 BUILD_FINGERPRINT := google/sailfish/sailfish:7.1.2/NJH47F/4146041:user/release-keys
