@@ -3,7 +3,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n.mk)
 PRODUCT_FIRST_API_LEVEL := 24
 PRODUCT_CHARACTERISTICS := tablet
 TARGET_IS_TABLET := true
-TARGET_HAS_NO_RADIO := true
 TARGET_NO_TELEPHONY := true
 
 LOCAL_PATH := device/sts/a04br3
@@ -246,7 +245,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.recovery.mt8167.rc:root/init.recovery.mt8167.rc \
     $(LOCAL_PATH)/rootdir/etc/init.connectivity.rc:root/init.connectivity.rc \
     $(LOCAL_PATH)/rootdir/etc/ueventd.mt8167.rc:root/ueventd.mt8167.rc \
-    $(LOCAL_PATH)/rootdir/etc/init.usb.rc:root/ini.tusb.rc \
+    $(LOCAL_PATH)/rootdir/etc/init.usb.rc:root/init.usb.rc \
     $(LOCAL_PATH)/rootdir/etc/init.usb.configfs.rc:root/init.usb.configfs.rc \
     $(LOCAL_PATH)/rootdir/etc/ueventd.rc:root/ueventd.rc \
     $(LOCAL_PATH)/rootdir/etc/init.modem.rc:root/init.modem.rc \
