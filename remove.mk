@@ -1,3 +1,22 @@
+REMOVE_APPS := \
+    Calendar \
+    Camera2 \
+    DeskClock \
+    Email \
+    ExactCalculator \
+    Calculator \
+    Jelly \
+    LatinIME \
+    LockClock \
+    WallpaperPicker \
+    AudioFX \
+    Contacts \
+    Eleven \
+    Gallery2 \
+    Recorder \
+    Trebuchet
+
+PRODUCT_PACKAGES := $(filter-out $(REMOVE_APPS), $(PRODUCT_PACKAGES))
 PRODUCT_PACKAGES := $(filter-out nfc, $(PRODUCT_PACKAGES))
 PRODUCT_PACKAGES := $(filter-out Dialer, $(PRODUCT_PACKAGES))
 PRODUCT_PACKAGES := $(filter-out Telephony, $(PRODUCT_PACKAGES))
