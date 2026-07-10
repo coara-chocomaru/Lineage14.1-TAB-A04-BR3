@@ -18,7 +18,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
-# REMOVE_APPS += \
+REMOVE_APPS += \
     Calendar \
     Camera2 \
     DeskClock \
@@ -36,7 +36,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
     Recorder \
     Trebuchet
 
-# PRODUCT_PACKAGES := $(filter-out $(REMOVE_APPS), $(PRODUCT_PACKAGES))
+PRODUCT_PACKAGES := $(filter-out $(REMOVE_APPS), $(PRODUCT_PACKAGES))
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0 \
@@ -164,7 +164,7 @@ PRODUCT_PACKAGES += \
     mkfs.f2fs \
     make_ext4fs
 
-# PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/media/bootanimation.zip
 
 PRODUCT_COPY_FILES += \
