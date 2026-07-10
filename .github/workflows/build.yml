@@ -2,7 +2,7 @@ name: LineageOS 14.1 Build - a04br3
 on:
   push:
     branches:
-      - testj
+      - test
   workflow_dispatch:
 
 env:
