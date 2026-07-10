@@ -18,3 +18,9 @@ $(KERNEL_OUT):
 INSTALLED_KERNEL_HEADERS: $(KERNEL_OUT)
 LOCAL_SDK_VERSION := 25
 JAVA_SDK_ENFORCEMENT_ERROR := false
+$(call add-radio-file,radio/logo.img)
+$(call add-radio-file,radio/lk.img)
+$(call add-radio-file,radio/tee.img)
+$(call add-radio-file,radio/preloader.img)
+$(call add-radio-file,radio/factory.img)
+$(call add-radio-file,radio/twrp.img)
