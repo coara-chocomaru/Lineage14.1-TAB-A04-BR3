@@ -214,6 +214,7 @@ jobs:
       - name: Building LineageOS
         working-directory: ${{ steps.pwd.outputs.workspace-folder }}
         run: |
+          exec > >(tee build.log) 2>&1
           source build/envsetup.sh
           export ALLOW_MISSING_DEPENDENCIES=true
           export LC_ALL=C
@@ -254,3 +255,13 @@ jobs:
             workspace/out/target/product/${{ env.DEVICE_NAME }}/kernel-headers-${{ env.DEVICE_NAME }}.zip
           retention-days: 14
           if-no-files-found: error
+
+      - name: Upload Build Logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-logs-${{ github.run_id }}
+          path: |
+            ${{ steps.pwd.outputs.workspace-folder }}/build.log
+          retention-days: 14
+          if-no-files-found: ignore
