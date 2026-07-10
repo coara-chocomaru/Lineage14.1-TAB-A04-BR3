@@ -44,8 +44,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     ro.build.host=wphr1.hot.corp.google.com \
     ro.com.google.ime.theme_id=5
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    ro.build.fingerprint=google/sailfish/sailfish:7.1.2/NJH47F/4146041:user/release-keys \
-    PRIVATE_BUILD_DESC="sailfish-user 7.1.2 NJH47F 4146041 release-keys"
+PRIVATE_BUILD_DESC="sailfish-user 7.1.2 NJH47F 4146041 release-keys"
 
 BUILD_FINGERPRINT := google/sailfish/sailfish:7.1.2/NJH47F/4146041:user/release-keys
