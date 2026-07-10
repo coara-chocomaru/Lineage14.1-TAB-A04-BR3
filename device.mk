@@ -54,8 +54,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.country=JP \
     ro.radio.noril=1 \
     config.disable_telephony=true \
-    keyguard.no_require_sim=true \
-    ro.com.google.ime.theme_id=5
+    keyguard.no_require_sim=true
 
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.build.selinux=0 \
@@ -125,6 +124,7 @@ ADDITIONAL_BUILD_PROPERTIES += \
     ro.boot.opt_using_default=1 \
     mtk.vdec.waitkeyframeforplay=1 \
     ro.sys.sdcardfs=1 \
+    ro.com.google.ime.theme_id=5 \
     persist.sys.timezone=Asia/Tokyo
 
 # PRODUCT_PACKAGES += \
