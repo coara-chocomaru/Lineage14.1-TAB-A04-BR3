@@ -254,32 +254,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.cm.rc:root/init.cm.rc \
     $(LOCAL_PATH)/rootdir/etc/init.rc:root/init.rc
 
-INSTALLED_RADIOIMAGE_TARGET := \
-    $(PRODUCT_OUT)/logo.img \
-    $(PRODUCT_OUT)/lk.img \
-    $(PRODUCT_OUT)/tee.img \
-    $(PRODUCT_OUT)/preloader.img \
-    $(PRODUCT_OUT)/factory.img \
-    $(PRODUCT_OUT)/twrp.img
-
-$(PRODUCT_OUT)/logo.img: $(LOCAL_PATH)/rootdir/logo.img | $(ACP)
-	$(copy-file-to-target)
-
-$(PRODUCT_OUT)/lk.img: $(LOCAL_PATH)/rootdir/lk.img | $(ACP)
-	$(copy-file-to-target)
-
-$(PRODUCT_OUT)/tee.img: $(LOCAL_PATH)/rootdir/tee.img | $(ACP)
-	$(copy-file-to-target)
-
-$(PRODUCT_OUT)/preloader.img: $(LOCAL_PATH)/rootdir/preloader.img | $(ACP)
-	$(copy-file-to-target)
-
-$(PRODUCT_OUT)/factory.img: $(LOCAL_PATH)/rootdir/factory.img | $(ACP)
-	$(copy-file-to-target)
-
-$(PRODUCT_OUT)/twrp.img: $(LOCAL_PATH)/rootdir/twrp.img | $(ACP)
-	$(copy-file-to-target)
-
 include device/sts/a04br3/media.mk
 include device/sts/a04br3/wifi.mk
 include device/sts/a04br3/permissions.mk
