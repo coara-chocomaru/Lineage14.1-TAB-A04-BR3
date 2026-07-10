@@ -5,7 +5,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 LOCAL_PATH := $(call my-dir)
-include device/sts/a04br3/remove.mk
 ifeq ($(TARGET_DEVICE),a04br3)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
