@@ -56,6 +56,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
     config.disable_telephony=true \
     keyguard.no_require_sim=true
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    ro.build.display.id=pixeltouch_nautilus-v1.0.0-20260709-v8 \
+    ro.build.flavor=sailfish-user \
+    ro.product.name=sailfish \
+    ro.product.device=sailfish \
+    ro.product.board=sailfish \
+    ro.build.product=sailfish \
+    ro.build.type=user \
+    ro.build.tags=release-keys \
+    ro.build.user=android-build \
+    ro.product.model=PixelTouch_3 \
+    ro.build.host=wphr1.hot.corp.google.com \
+    ro.com.google.ime.theme_id=5
+
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.build.selinux=0 \
     persist.radio.noril=1 \
