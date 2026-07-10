@@ -18,26 +18,6 @@ PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
-REMOVE_APPS := \
-    Calendar \
-    Camera2 \
-    DeskClock \
-    Email \
-    ExactCalculator \
-    Calculator \
-    Jelly \
-    LatinIME \
-    LockClock \
-    WallpaperPicker \
-    AudioFX \
-    Contacts \
-    Eleven \
-    Gallery2 \
-    Recorder \
-    Trebuchet
-
-PRODUCT_PACKAGES := $(filter-out $(REMOVE_APPS), $(PRODUCT_PACKAGES))
-
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0 \
     ro.secure=0 \
