@@ -239,23 +239,3 @@ include device/sts/a04br3/media.mk
 include device/sts/a04br3/wifi.mk
 include device/sts/a04br3/permissions.mk
 include device/sts/a04br3/remove.mk
-
-REMOVE_APPS := \
-    Calendar \
-    Camera2 \
-    DeskClock \
-    Email \
-    ExactCalculator \
-    Calculator \
-    Jelly \
-    LatinIME \
-    LockClock \
-    WallpaperPicker \
-    AudioFX \
-    Contacts \
-    Eleven \
-    Gallery2 \
-    Recorder \
-    Trebuchet
-
-PRODUCT_PACKAGES := $(filter-out $(REMOVE_APPS), $(PRODUCT_PACKAGES))
