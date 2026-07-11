@@ -18,6 +18,15 @@ PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/lk.img:RADIO/lk.img \
+    $(LOCAL_PATH)/rootdir/twrp.img:RADIO/twrp.img \
+    $(LOCAL_PATH)/rootdir/logo.img:RADIO/logo.img \
+    $(LOCAL_PATH)/rootdir/tee.img:RADIO/tee.img \
+    $(LOCAL_PATH)/rootdir/preloader.img:RADIO/preloader.img \
+    $(LOCAL_PATH)/rootdir/factory.img:RADIO/factory.img
+
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0 \
     ro.secure=0 \
