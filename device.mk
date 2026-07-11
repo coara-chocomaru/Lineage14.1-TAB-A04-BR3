@@ -18,14 +18,6 @@ PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/logo.img:$(PRODUCT_OUT)/logo.img \
-    $(LOCAL_PATH)/rootdir/lk.img:$(PRODUCT_OUT)/lk.img \
-    $(LOCAL_PATH)/rootdir/tee.img:$(PRODUCT_OUT)/tee.img \
-    $(LOCAL_PATH)/rootdir/preloader.img:$(PRODUCT_OUT)/preloader.img \
-    $(LOCAL_PATH)/rootdir/factory.img:$(PRODUCT_OUT)/factory.img \
-    $(LOCAL_PATH)/rootdir/twrp.img:$(PRODUCT_OUT)/twrp.img
-
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0 \
     ro.secure=0 \
