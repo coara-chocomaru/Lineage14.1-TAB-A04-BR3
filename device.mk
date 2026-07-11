@@ -181,7 +181,6 @@ PRODUCT_PACKAGES += \
     DynamiteModulesB \
     DynamiteModulesC \
     Phonesky \
-    Chrome \
     GoogleCalendarSyncAdapter \
     GoogleExtShared \
     CalculatorGoogle \
