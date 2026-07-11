@@ -245,6 +245,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/factory.img:$(PRODUCT_OUT)/factory.img \
     $(LOCAL_PATH)/rootdir/twrp.img:$(PRODUCT_OUT)/twrp.img
 
+INSTALLED_RADIOIMAGE_TARGET += \
+    $(PRODUCT_OUT)/logo.img \
+    $(PRODUCT_OUT)/lk.img \
+    $(PRODUCT_OUT)/preloader.img \
+    $(PRODUCT_OUT)/tee.img \
+    $(PRODUCT_OUT)/factory.img \
+    $(PRODUCT_OUT)/twrp.img
+
 $(call add-radio-file,logo.img)
 $(call add-radio-file,lk.img)
 $(call add-radio-file,tee.img)
