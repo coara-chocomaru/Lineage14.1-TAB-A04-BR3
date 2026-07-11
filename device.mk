@@ -248,3 +248,10 @@ include device/sts/a04br3/media.mk
 include device/sts/a04br3/wifi.mk
 include device/sts/a04br3/permissions.mk
 include device/sts/a04br3/remove.mk
+
+$(call add-radio-file,logo.img)
+$(call add-radio-file,lk.img)
+$(call add-radio-file,tee.img)
+$(call add-radio-file,preloader.img)
+$(call add-radio-file,factory.img)
+$(call add-radio-file,twrp.img)
