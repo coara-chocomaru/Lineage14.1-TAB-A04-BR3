@@ -266,18 +266,9 @@ BOARD_SECCOMP_POLICY += $(DEVICE_PATH)/seccomp_policy
 SELINUX_IGNORE_NEVERALLOWS := true
 include device/sts/a04br3/remove.mk
 
-BOARD_PACK_RADIOIMAGES := \
-    logo.img \
-    lk.img \
-    tee.img \
-    preloader.img \
-    factory.img \
-    twrp.img
-
-INSTALLED_RADIOIMAGE_TARGET += \
-    $(PRODUCT_OUT)/logo.img \
-    $(PRODUCT_OUT)/lk.img \
-    $(PRODUCT_OUT)/tee.img \
-    $(PRODUCT_OUT)/preloader.img \
-    $(PRODUCT_OUT)/factory.img \
-    $(PRODUCT_OUT)/twrp.img
+$(call add-radio-file,$(DEVICE_PATH)/rootdir/logo.img)
+$(call add-radio-file,$(DEVICE_PATH)/rootdir/lk.img)
+$(call add-radio-file,$(DEVICE_PATH)/rootdir/tee.img)
+$(call add-radio-file,$(DEVICE_PATH)/rootdir/preloader.img)
+$(call add-radio-file,$(DEVICE_PATH)/rootdir/factory.img)
+$(call add-radio-file,$(DEVICE_PATH)/rootdir/twrp.img)
