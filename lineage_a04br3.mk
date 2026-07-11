@@ -51,24 +51,11 @@ REMOVE_APPS := \
     Gallery2 \
     Recorder \
     Trebuchet \
-    Messaging \
     Exchange2 \
     BlockedNumberProvider
 
 REMOVE_TELEPHONY := \
     Dialer \
-    Telephony \
-    TelephonyProvider \
-    TeleService \
-    InCallUi \
-    CarrierConfig \
-    SimToolkit \
-    Stk \
-    Mms \
-    EmailProvider \
-    com.android.email \
-    com.android.exchange \
-    com.android.providers.blockednumber
 
 REMOVE_NFC := \
     Nfc \
