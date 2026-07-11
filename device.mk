@@ -245,6 +245,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/factory.img:$(PRODUCT_OUT)/factory.img \
     $(LOCAL_PATH)/rootdir/twrp.img:$(PRODUCT_OUT)/twrp.img
 
+$(call add-radio-file,logo.img)
+$(call add-radio-file,lk.img)
+$(call add-radio-file,tee.img)
+$(call add-radio-file,preloader.img)
+$(call add-radio-file,factory.img)
+$(call add-radio-file,twrp.img)
+
 include device/sts/a04br3/media.mk
 include device/sts/a04br3/wifi.mk
 include device/sts/a04br3/permissions.mk
