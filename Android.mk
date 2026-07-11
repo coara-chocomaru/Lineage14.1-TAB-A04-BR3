@@ -6,6 +6,7 @@
 #
 LOCAL_PATH := $(call my-dir)
 ifeq ($(TARGET_DEVICE),a04br3)
+include $(call all-subdir-makefiles,$(LOCAL_PATH))
 $(PRODUCT_OUT)/lk.img: $(LOCAL_PATH)/rootdir/lk.img
 	$(transform-prebuilt-to-target)
 $(PRODUCT_OUT)/logo.img: $(LOCAL_PATH)/rootdir/logo.img
@@ -26,9 +27,7 @@ INSTALLED_RADIOIMAGE_TARGET += \
     $(PRODUCT_OUT)/preloader.img \
     $(PRODUCT_OUT)/factory.img \
     $(PRODUCT_OUT)/twrp.img
-include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
-
 KERNEL_OUT := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ
 
 $(KERNEL_OUT):
