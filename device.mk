@@ -18,13 +18,6 @@ PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
-$(call add-radio-file,rootdir/logo.img)
-$(call add-radio-file,rootdir/lk.img)
-$(call add-radio-file,rootdir/tee.img)
-$(call add-radio-file,rootdir/preloader.img)
-$(call add-radio-file,rootdir/factory.img)
-$(call add-radio-file,rootdir/twrp.img)
-
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0 \
     ro.secure=0 \
