@@ -18,6 +18,14 @@ PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/logo.img:$(PRODUCT_OUT)/logo.img \
+    $(LOCAL_PATH)/rootdir/lk.img:$(PRODUCT_OUT)/lk.img \
+    $(LOCAL_PATH)/rootdir/tee.img:$(PRODUCT_OUT)/tee.img \
+    $(LOCAL_PATH)/rootdir/preloader.img:$(PRODUCT_OUT)/preloader.img \
+    $(LOCAL_PATH)/rootdir/factory.img:$(PRODUCT_OUT)/factory.img \
+    $(LOCAL_PATH)/rootdir/twrp.img:$(PRODUCT_OUT)/twrp.img
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0 \
     ro.secure=0 \
@@ -166,8 +174,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml
 
-
-
 #     Chrome \
 #     GoogleCamera \
 
@@ -236,29 +242,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.zygote64_32.rc:root/init.zygote64_32.rc \
     $(LOCAL_PATH)/rootdir/etc/init.cm.rc:root/init.cm.rc \
     $(LOCAL_PATH)/rootdir/etc/init.rc:root/init.rc
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/logo.img:$(PRODUCT_OUT)/logo.img \
-    $(LOCAL_PATH)/rootdir/lk.img:$(PRODUCT_OUT)/lk.img \
-    $(LOCAL_PATH)/rootdir/tee.img:$(PRODUCT_OUT)/tee.img \
-    $(LOCAL_PATH)/rootdir/preloader.img:$(PRODUCT_OUT)/preloader.img \
-    $(LOCAL_PATH)/rootdir/factory.img:$(PRODUCT_OUT)/factory.img \
-    $(LOCAL_PATH)/rootdir/twrp.img:$(PRODUCT_OUT)/twrp.img
-
-INSTALLED_RADIOIMAGE_TARGET += \
-    $(PRODUCT_OUT)/logo.img \
-    $(PRODUCT_OUT)/lk.img \
-    $(PRODUCT_OUT)/preloader.img \
-    $(PRODUCT_OUT)/tee.img \
-    $(PRODUCT_OUT)/factory.img \
-    $(PRODUCT_OUT)/twrp.img
-
-$(call add-radio-file,logo.img)
-$(call add-radio-file,lk.img)
-$(call add-radio-file,tee.img)
-$(call add-radio-file,preloader.img)
-$(call add-radio-file,factory.img)
-$(call add-radio-file,twrp.img)
 
 include device/sts/a04br3/media.mk
 include device/sts/a04br3/wifi.mk
