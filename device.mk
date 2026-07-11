@@ -166,6 +166,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml
 
+
+
+#     Chrome \
+
 PRODUCT_PACKAGES += \
     com.google.android.media.effects \
     GoogleServicesFramework \
@@ -181,7 +185,6 @@ PRODUCT_PACKAGES += \
     GoogleExtShared \
     CalculatorGoogle \
     CalendarGoogle \
-    Chrome \
     GoogleCamera \
     LatinIMEGoogle \
     NexusWallpaper \
