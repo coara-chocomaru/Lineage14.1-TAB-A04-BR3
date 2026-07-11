@@ -34,3 +34,44 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="sailfish-user 7.1.2 NJH47F 4146041 release-keys"
 
 BUILD_FINGERPRINT := google/sailfish/sailfish:7.1.2/NJH47F/4146041:user/release-keys
+REMOVE_APPS := \
+    Calendar \
+    Camera2 \
+    DeskClock \
+    Email \
+    ExactCalculator \
+    Calculator \
+    Jelly \
+    LatinIME \
+    LockClock \
+    WallpaperPicker \
+    AudioFX \
+    Contacts \
+    Eleven \
+    Gallery2 \
+    Recorder \
+    Trebuchet \
+    Messaging \
+    Exchange2 \
+    BlockedNumberProvider
+
+REMOVE_TELEPHONY := \
+    Dialer \
+    Telephony \
+    TelephonyProvider \
+    TeleService \
+    InCallUi \
+    CarrierConfig \
+    SimToolkit \
+    Stk \
+    Mms \
+    EmailProvider \
+    com.android.email \
+    com.android.exchange \
+    com.android.providers.blockednumber
+
+REMOVE_NFC := \
+    Nfc \
+    Tag
+
+PRODUCT_PACKAGES := $(filter-out $(REMOVE_APPS) $(REMOVE_TELEPHONY) $(REMOVE_NFC), $(PRODUCT_PACKAGES))
