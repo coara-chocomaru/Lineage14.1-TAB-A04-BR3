@@ -1,5 +1,4 @@
-name: LineageOS 14.1 Build - a04br3-v3
-
+name: LineageOS 14.1 Build - a04br3-v4
 on:
   push:
     branches:
