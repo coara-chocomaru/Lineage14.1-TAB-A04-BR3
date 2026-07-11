@@ -237,7 +237,22 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.cm.rc:root/init.cm.rc \
     $(LOCAL_PATH)/rootdir/etc/init.rc:root/init.rc
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/logo.img:$(PRODUCT_OUT)/logo.img \
+    $(LOCAL_PATH)/rootdir/lk.img:$(PRODUCT_OUT)/lk.img \
+    $(LOCAL_PATH)/rootdir/tee.img:$(PRODUCT_OUT)/tee.img \
+    $(LOCAL_PATH)/rootdir/preloader.img:$(PRODUCT_OUT)/preloader.img \
+    $(LOCAL_PATH)/rootdir/factory.img:$(PRODUCT_OUT)/factory.img \
+    $(LOCAL_PATH)/rootdir/twrp.img:$(PRODUCT_OUT)/twrp.img
+
 include device/sts/a04br3/media.mk
 include device/sts/a04br3/wifi.mk
 include device/sts/a04br3/permissions.mk
 include device/sts/a04br3/remove.mk
+
+$(call add-radio-file-internal,logo.img)
+$(call add-radio-file-internal,lk.img)
+$(call add-radio-file-internal,tee.img)
+$(call add-radio-file-internal,preloader.img)
+$(call add-radio-file-internal,factory.img)
+$(call add-radio-file-internal,twrp.img)
