@@ -6,6 +6,26 @@
 #
 LOCAL_PATH := $(call my-dir)
 ifeq ($(TARGET_DEVICE),a04br3)
+$(PRODUCT_OUT)/lk.img: $(LOCAL_PATH)/rootdir/lk.img
+	$(transform-prebuilt-to-target)
+$(PRODUCT_OUT)/logo.img: $(LOCAL_PATH)/rootdir/logo.img
+	$(transform-prebuilt-to-target)
+$(PRODUCT_OUT)/tee.img: $(LOCAL_PATH)/rootdir/tee.img
+	$(transform-prebuilt-to-target)
+$(PRODUCT_OUT)/preloader.img: $(LOCAL_PATH)/rootdir/preloader.img
+	$(transform-prebuilt-to-target)
+$(PRODUCT_OUT)/factory.img: $(LOCAL_PATH)/rootdir/factory.img
+	$(transform-prebuilt-to-target)
+$(PRODUCT_OUT)/twrp.img: $(LOCAL_PATH)/rootdir/twrp.img
+	$(transform-prebuilt-to-target)
+
+INSTALLED_RADIOIMAGE_TARGET += \
+    $(PRODUCT_OUT)/lk.img \
+    $(PRODUCT_OUT)/logo.img \
+    $(PRODUCT_OUT)/tee.img \
+    $(PRODUCT_OUT)/preloader.img \
+    $(PRODUCT_OUT)/factory.img \
+    $(PRODUCT_OUT)/twrp.img
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
 
