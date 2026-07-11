@@ -1,6 +1,5 @@
 name: LineageOS 14.1 Build - a04br3
 on:
-
   push:
     branches:
       - test
