@@ -202,15 +202,6 @@ jobs:
         run: |
             git clone --depth=1 -b main https://github.com/coara-chocomaru/android_kernel_sts_a04br3-test workspace/kernel/sts/a04br3
       
-      - name: Override default audio files with custom ones
-        working-directory: ${{ steps.pwd.outputs.workspace-folder }}
-        run: |
-          cp -f vendor/sts/a04br3/proprietary/media/audio/alarms/*.ogg frameworks/base/data/sounds/alarms/ || true
-          cp -f vendor/sts/a04br3/proprietary/media/audio/notifications/*.ogg frameworks/base/data/sounds/notifications/ || true
-          cp -f vendor/sts/a04br3/proprietary/media/audio/ringtones/*.ogg frameworks/base/data/sounds/ringtones/ || true
-          cp -f vendor/sts/a04br3/proprietary/media/audio/ui/*.ogg frameworks/base/data/sounds/ui/ || true
-          echo "Custom audio files overridden successfully."
-
       - name: Building LineageOS
         working-directory: ${{ steps.pwd.outputs.workspace-folder }}
         run: |
