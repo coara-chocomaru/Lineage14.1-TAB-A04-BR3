@@ -8,7 +8,7 @@ BOARD_NO_RECOVERY_PATCH := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 ALLOW_MISSING_DEPENDENCIES := true
 #RECOVERY_VARIANT := twrp
-#T ARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 TARGET_OTA_ASSERT_DEVICE := TAB-A04-BR3,a04br3
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
@@ -265,3 +265,10 @@ include vendor/sts/a04br3/BoardConfigVendor.mk
 BOARD_SECCOMP_POLICY += $(DEVICE_PATH)/seccomp_policy
 SELINUX_IGNORE_NEVERALLOWS := true
 include device/sts/a04br3/remove.mk
+BOARD_PACK_RADIOIMAGES := \
+    logo.img \
+    lk.img \
+    tee.img \
+    preloader.img \
+    factory.img \
+    twrp.img
