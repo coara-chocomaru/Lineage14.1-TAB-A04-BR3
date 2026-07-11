@@ -19,7 +19,7 @@ LOCAL_CFLAGS := \
     -fvisibility=default \
     -fno-data-sections \
     -fno-function-sections
-LOCAL_LDFLAGS := -Wl,--no-gc-sections
+LOCAL_LDFLAGS := -Wl,--no-gc-sections -Wl,-z,global
 LOCAL_CLANG := true
 LOCAL_C_INCLUDES += \
     frameworks/native/include \
