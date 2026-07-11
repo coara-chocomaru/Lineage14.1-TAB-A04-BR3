@@ -18,14 +18,12 @@ PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/lk.img:RADIO/lk.img \
-    $(LOCAL_PATH)/rootdir/twrp.img:RADIO/twrp.img \
-    $(LOCAL_PATH)/rootdir/logo.img:RADIO/logo.img \
-    $(LOCAL_PATH)/rootdir/tee.img:RADIO/tee.img \
-    $(LOCAL_PATH)/rootdir/preloader.img:RADIO/preloader.img \
-    $(LOCAL_PATH)/rootdir/factory.img:RADIO/factory.img
-
+$(call add-radio-file,rootdir/logo.img)
+$(call add-radio-file,rootdir/lk.img)
+$(call add-radio-file,rootdir/tee.img)
+$(call add-radio-file,rootdir/preloader.img)
+$(call add-radio-file,rootdir/factory.img)
+$(call add-radio-file,rootdir/twrp.img)
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0 \
@@ -248,10 +246,3 @@ include device/sts/a04br3/media.mk
 include device/sts/a04br3/wifi.mk
 include device/sts/a04br3/permissions.mk
 include device/sts/a04br3/remove.mk
-
-$(call add-radio-file,logo.img)
-$(call add-radio-file,lk.img)
-$(call add-radio-file,tee.img)
-$(call add-radio-file,preloader.img)
-$(call add-radio-file,factory.img)
-$(call add-radio-file,twrp.img)
