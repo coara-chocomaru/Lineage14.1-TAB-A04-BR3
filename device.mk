@@ -169,6 +169,7 @@ PRODUCT_COPY_FILES += \
 
 
 #     Chrome \
+#     GoogleCamera \
 
 PRODUCT_PACKAGES += \
     com.google.android.media.effects \
@@ -185,7 +186,6 @@ PRODUCT_PACKAGES += \
     GoogleExtShared \
     CalculatorGoogle \
     CalendarGoogle \
-    GoogleCamera \
     LatinIMEGoogle \
     NexusWallpaper \
     Photos \
