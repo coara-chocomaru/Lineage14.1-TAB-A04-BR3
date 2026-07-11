@@ -7,12 +7,6 @@
 LOCAL_PATH := $(call my-dir)
 ifeq ($(TARGET_DEVICE),a04br3)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
-$(call add-radio-file,logo.img)
-$(call add-radio-file,lk.img)
-$(call add-radio-file,tee.img)
-$(call add-radio-file,preloader.img)
-$(call add-radio-file,factory.img)
-$(call add-radio-file,twrp.img)
 endif
 
 KERNEL_OUT := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ
