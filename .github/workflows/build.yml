@@ -127,6 +127,7 @@ jobs:
             mv device/sts/a04br3/SetupWizard packages/apps/
             rm -rf device/sts/a04br3/SetupWizard || true
             cp -rf device/sts/a04br3/prebuilt/AndroidManifest.xml  packages/apps/DocumentsUI/ || true
+            rm -rf device/sts/a04br3/prebuilt/AndroidManifest.xml || true
 
       - name: Download and Place Chrome APK
         working-directory: workspace
