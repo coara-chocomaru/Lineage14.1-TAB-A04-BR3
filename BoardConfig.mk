@@ -134,8 +134,7 @@ BOARD_BLUE_LED_PATH := "/sys/devices/platform/leds-mt65xx/leds/blue"
 TARGET_BOOTLOADER_BOARD_NAME := a04br3
 TARGET_NO_FACTORYIMAGE :=true
 TARGET_NO_BOOTLOADER := true
-TARGET_NO_RADIOIMAGE := true
-
+TARGET_NO_RADIOIMAGE := false
 # Display
 DEVICE_RESOLUTION := 1280x800
 LANDSCAPE_RESOLUTION := 1280x800
@@ -265,7 +264,6 @@ include vendor/sts/a04br3/BoardConfigVendor.mk
 BOARD_SECCOMP_POLICY += $(DEVICE_PATH)/seccomp_policy
 SELINUX_IGNORE_NEVERALLOWS := true
 include device/sts/a04br3/remove.mk
-
 $(call add-radio-file,$(DEVICE_PATH)/rootdir/logo.img)
 $(call add-radio-file,$(DEVICE_PATH)/rootdir/lk.img)
 $(call add-radio-file,$(DEVICE_PATH)/rootdir/tee.img)
