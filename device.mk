@@ -7,7 +7,6 @@ TARGET_NO_TELEPHONY := true
 TARGET_HAS_NO_RADIO := true
 LOCAL_PATH := device/sts/a04br3
 
-# API level
 PRODUCT_BUILD_RECOVERY_IMAGE := true
 PRODUCT_BUILD_SYSTEM_IMAGE := true
 PRODUCT_BUILD_BOOT_IMAGE := true
@@ -241,4 +240,3 @@ include device/sts/a04br3/overrides.mk
 include device/sts/a04br3/media.mk
 include device/sts/a04br3/wifi.mk
 include device/sts/a04br3/permissions.mk
-include device/sts/a04br3/remove.mk
