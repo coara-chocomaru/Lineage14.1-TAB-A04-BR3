@@ -175,6 +175,7 @@ PRODUCT_PACKAGES += \
     GmsCore \
     Velvet \
     NexusLauncher \
+    NexusLauncherIcons \
     HelpRtc \
     DynamiteModulesA \
     DynamiteModulesB \
