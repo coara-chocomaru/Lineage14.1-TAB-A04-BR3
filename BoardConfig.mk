@@ -68,6 +68,7 @@ BOARD_USE_SOFT_GATEKEEPER := true
 
 #artエラーの為追加
 WITH_DEXPREOPT := true
+PRODUCT_DEX_PREOPT_BOOT_FLAGS := --compiler-filter=everything
 #DISABLE_DEXPREOPT := true
 #DONT_DEXPREOPT_PREBUILTS := true
 #DEX_PREOPT_DEFAULT := nostripping
