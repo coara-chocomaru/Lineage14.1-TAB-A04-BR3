@@ -19,13 +19,13 @@ def AddImage(info, input_zip, basename, dest):
 
 def OTA_InstallEnd(info, input_zip):
     info.script.Print("Patching firmware images...")
-    AddImage(info, input_zip, "logo.img", "/dev/block/bootdevice/by-name/logo")
-    AddImage(info, input_zip, "lk.img", "/dev/block/bootdevice/by-name/lk")
-    AddImage(info, input_zip, "lk.img", "/dev/block/bootdevice/by-name/lk2")
-    AddImage(info, input_zip, "tee.img", "/dev/block/bootdevice/by-name/tee1")
-    AddImage(info, input_zip, "tee.img", "/dev/block/bootdevice/by-name/tee2")
+    AddImage(info, input_zip, "logo.img", "/dev/block/platform/bootdevice/by-name/logo")
+    AddImage(info, input_zip, "lk.img", "/dev/block/platform/bootdevice/by-name/lk")
+    AddImage(info, input_zip, "lk.img", "/dev/block/platform/bootdevice/by-name/lk2")
+    AddImage(info, input_zip, "tee.img", "/dev/block/platform/bootdevice/by-name/tee1")
+    AddImage(info, input_zip, "tee.img", "/dev/block/platform/bootdevice/by-name/tee2")
     AddImage(info, input_zip, "preloader.img", "/dev/block/mmcblk0boot0")
     AddImage(info, input_zip, "preloader.img", "/dev/block/mmcblk0boot1")
-    AddImage(info, input_zip, "twrp.img", "/dev/block/bootdevice/by-name/recovery")
-    AddImage(info, input_zip, "factory.img", "/dev/block/bootdevice/by-name/factory")
+    AddImage(info, input_zip, "twrp.img", "/dev/block/platform/bootdevice/by-name/recovery")
+    AddImage(info, input_zip, "factory.img", "/dev/block/platform/bootdevice/by-name/factory")
     return
