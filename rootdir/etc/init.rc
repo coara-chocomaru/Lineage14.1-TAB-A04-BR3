@@ -356,6 +356,14 @@ on post-fs-data
     mkdir /data/misc/perfprofd 0775 root root
     # give system access to wpa_supplicant.conf for backup and restore
     chmod 0660 /data/misc/wifi/wpa_supplicant.conf
+　　 # create resource-cache and double-check the perms
+    mkdir /data/resource-cache 0771 system system
+    chown system system /data/resource-cache
+    chmod 0771 /data/resource-cache
+    mkdir /data/dalvik-cache 0771 root root
+    chown root root /data/dalvik-cache
+    # create the A/B OTA directory, so as to enforce our permissions
+    mkdir /data/ota 0771 root root
     mkdir /data/local 0751 root root
     mkdir /data/misc/media 0700 media media
     mkdir /data/misc/audioserver 0700 audioserver audioserver
@@ -380,17 +388,6 @@ on post-fs-data
     mkdir /data/app 0771 system system
     mkdir /data/property 0700 root root
     mkdir /data/tombstones 0771 system system
-
-    # create dalvik-cache, so as to enforce our permissions
-    mkdir /data/dalvik-cache 0771 root root
-    chown root root /data/dalvik-cache
-    # create the A/B OTA directory, so as to enforce our permissions
-    mkdir /data/ota 0771 root root
-
-    # create resource-cache and double-check the perms
-    mkdir /data/resource-cache 0771 system system
-    chown system system /data/resource-cache
-    chmod 0771 /data/resource-cache
 
     # create the lost+found directories, so as to enforce our permissions
     mkdir /data/lost+found 0770 root root
