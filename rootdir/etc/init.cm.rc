@@ -113,8 +113,6 @@ on boot
     chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/sync_freq
     chown system system /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_any_cpu_load
     chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_any_cpu_load
-   
-    chmod -R 777 /data
     chown system system /sys/block/mmcblk0/queue/scheduler
     chmod 0664 /sys/block/mmcblk0/queue/scheduler
     restorecon /sys/block/mmcblk0/queue/scheduler
