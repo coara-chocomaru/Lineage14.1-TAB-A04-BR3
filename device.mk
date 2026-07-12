@@ -13,14 +13,10 @@ PRODUCT_BUILD_SYSTEM_IMAGE := true
 PRODUCT_BUILD_BOOT_IMAGE := true
 PRODUCT_BUILD_VENDOR_IMAGE := false
 
-include device/sts/a04br3/overrides.mk
-
 # Product characteristics
 PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
-
-PRODUCT_PACKAGES += custom_package_filter
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0 \
@@ -160,7 +156,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/zm:system/bin/zm
 
 PRODUCT_PACKAGES += \
-    lights.mt8167
+    lights.mt8167 \
+    custom_package_filter
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -240,6 +237,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.cm.rc:root/init.cm.rc \
     $(LOCAL_PATH)/rootdir/etc/init.rc:root/init.rc
 
+include device/sts/a04br3/overrides.mk
 include device/sts/a04br3/media.mk
 include device/sts/a04br3/wifi.mk
 include device/sts/a04br3/permissions.mk
