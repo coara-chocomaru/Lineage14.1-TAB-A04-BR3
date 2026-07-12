@@ -2,6 +2,8 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_MODULE := custom_package_filter
 LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES := /dev/null 
 LOCAL_OVERRIDES_PACKAGES := \
     Calendar \
     Camera2 \
@@ -26,4 +28,4 @@ LOCAL_OVERRIDES_PACKAGES := \
     SimToolkit \
     Stk
 
-include $(BUILD_PHONY_PACKAGE)
+include $(BUILD_PREBUILT) 
