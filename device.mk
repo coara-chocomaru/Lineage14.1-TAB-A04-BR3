@@ -5,13 +5,15 @@ PRODUCT_CHARACTERISTICS := tablet
 TARGET_IS_TABLET := true
 TARGET_NO_TELEPHONY := true
 TARGET_HAS_NO_RADIO := true
-
 LOCAL_PATH := device/sts/a04br3
-# API levels
+
+# API level
 PRODUCT_BUILD_RECOVERY_IMAGE := true
 PRODUCT_BUILD_SYSTEM_IMAGE := true
 PRODUCT_BUILD_BOOT_IMAGE := true
 PRODUCT_BUILD_VENDOR_IMAGE := false
+
+include device/sts/a04br3/overrides.mk
 
 # Product characteristics
 PRODUCT_PACKAGE_OVERLAYS += \
