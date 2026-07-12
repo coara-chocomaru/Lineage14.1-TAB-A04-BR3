@@ -15,9 +15,9 @@ $(call inherit-product, device/sts/a04br3/device.mk)
 
 PRODUCT_DEVICE := a04br3
 PRODUCT_NAME := lineage_a04br3
-PRODUCT_RELEASE_NAME := PixelTouch_3
+PRODUCT_RELEASE_NAME := PixelTouch 3
 PRODUCT_BRAND := google
-PRODUCT_MODEL := PixelTouch_3
+PRODUCT_MODEL := PixelTouch 3
 PRODUCT_MANUFACTURER := google
 PRODUCT_GMS_CLIENTID_BASE := android-google
 PRODUCT_LOCALES := ja_JP en_US en_AU
