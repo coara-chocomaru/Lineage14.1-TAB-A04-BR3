@@ -4,9 +4,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := custom_package_filter
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)
 LOCAL_SRC_FILES := empty
-
 LOCAL_OVERRIDES_PACKAGES := \
     Calendar \
     Camera2 \
