@@ -7,17 +7,17 @@
 LOCAL_PATH := $(call my-dir)
 ifeq ($(TARGET_DEVICE),a04br3)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
-$(PRODUCT_OUT)/lk.img: $(LOCAL_PATH)/rootdir/lk.img
+$(PRODUCT_OUT)/lk.img: $(LOCAL_PATH)/lk.img
 	$(transform-prebuilt-to-target)
-$(PRODUCT_OUT)/logo.img: $(LOCAL_PATH)/rootdir/logo.img
+$(PRODUCT_OUT)/logo.img: $(LOCAL_PATH)/logo.img
 	$(transform-prebuilt-to-target)
-$(PRODUCT_OUT)/tee.img: $(LOCAL_PATH)/rootdir/tee.img
+$(PRODUCT_OUT)/tee.img: $(LOCAL_PATH)/tee.img
 	$(transform-prebuilt-to-target)
-$(PRODUCT_OUT)/preloader.img: $(LOCAL_PATH)/rootdir/preloader.img
+$(PRODUCT_OUT)/preloader.img: $(LOCAL_PATH)/preloader.img
 	$(transform-prebuilt-to-target)
-$(PRODUCT_OUT)/factory.img: $(LOCAL_PATH)/rootdir/factory.img
+$(PRODUCT_OUT)/factory.img: $(LOCAL_PATH)/factory.img
 	$(transform-prebuilt-to-target)
-$(PRODUCT_OUT)/twrp.img: $(LOCAL_PATH)/rootdir/twrp.img
+$(PRODUCT_OUT)/twrp.img: $(LOCAL_PATH)/twrp.img
 	$(transform-prebuilt-to-target)
 
 INSTALLED_RADIOIMAGE_TARGET += \
