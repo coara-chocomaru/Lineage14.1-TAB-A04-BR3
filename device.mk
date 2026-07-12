@@ -236,7 +236,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.cm.rc:root/init.cm.rc \
     $(LOCAL_PATH)/rootdir/etc/init.rc:root/init.rc
 
-include device/sts/a04br3/overrides.mk
 include device/sts/a04br3/media.mk
 include device/sts/a04br3/wifi.mk
 include device/sts/a04br3/permissions.mk
