@@ -16,7 +16,7 @@ $(call inherit-product, device/sts/a04br3/device.mk)
 PRODUCT_DEVICE := a04br3
 PRODUCT_NAME := lineage_a04br3
 PRODUCT_RELEASE_NAME := PixelTouch 3
-PRODUCT_BRAND := google
+PRODUCT_BRAND := Google
 PRODUCT_MODEL := PixelTouch 3
 PRODUCT_MANUFACTURER := Google
 PRODUCT_GMS_CLIENTID_BASE := android-google
@@ -34,31 +34,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="sailfish-user 7.1.2 NJH47F 4146041 release-keys"
 
 BUILD_FINGERPRINT := google/sailfish/sailfish:7.1.2/NJH47F/4146041:user/release-keys
-REMOVE_APPS := \
-    Calendar \
-    Camera2 \
-    DeskClock \
-    Email \
-    ExactCalculator \
-    Calculator \
-    Jelly \
-    LatinIME \
-    LockClock \
-    WallpaperPicker \
-    AudioFX \
-    Contacts \
-    Eleven \
-    Gallery2 \
-    Recorder \
-    Trebuchet \
-    Exchange2 \
-    BlockedNumberProvider
-
-REMOVE_TELEPHONY := \
-    Dialer \
-
-REMOVE_NFC := \
-    Nfc \
-    Tag
-
-PRODUCT_PACKAGES := $(filter-out $(REMOVE_APPS) $(REMOVE_TELEPHONY) $(REMOVE_NFC), $(PRODUCT_PACKAGES))
