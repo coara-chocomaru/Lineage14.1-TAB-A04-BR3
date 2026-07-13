@@ -119,7 +119,17 @@ jobs:
         uses: pierotofy/set-swap-space@master
         with:
           swap-size-gb: 12
-          
+
+      - name: Download and Place Chrome APK
+        working-directory: workspace
+        run: |
+           mkdir -p vendor/sts/a04br3/proprietary/app/Chrome
+           echo "Downloading Chrome.apk..."
+           curl -L -o vendor/sts/a04br3/proprietary/app/Chrome/Chrome.apk \
+           https://github.com/coara-chocomaru/Lineage14.1-TAB-A04-BR3/releases/download/c/Chrome.apk
+           echo "Chrome APK placed successfully:"
+           chmod 644 vendor/sts/a04br3/proprietary/app/Chrome/Chrome.apk
+
       - name: Apply Folder Patch
         working-directory: workspace
         run: |
