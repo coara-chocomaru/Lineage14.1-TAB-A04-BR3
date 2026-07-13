@@ -53,7 +53,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.country=JP \
     ro.radio.noril=1 \
     config.disable_telephony=true \
-    keyguard.no_require_sim=true
+    keyguard.no_require_sim=true \
+    dalvik.vm.dex2oat-filter=speed-profile \
+    dalvik.vm.image-dex2oat-filter=speed-profile \
+    dalvik.vm.dex2oat-threads=3 \
+    dalvik.vm.dex2oat-flags=--no-watch-dog
 
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.build.selinux=0 \
