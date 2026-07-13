@@ -265,4 +265,3 @@ include vendor/sts/a04br3/BoardConfigVendor.mk
 	#$(DEVICE_PATH)/sepolicy/
 BOARD_SECCOMP_POLICY += $(DEVICE_PATH)/seccomp_policy
 SELINUX_IGNORE_NEVERALLOWS := true
-include device/sts/a04br3/remove.mk
