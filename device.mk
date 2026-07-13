@@ -174,6 +174,7 @@ PRODUCT_PACKAGES += \
     GoogleServicesFramework \
     GmsCore \
     Velvet \
+    Chrome \
     NexusLauncher \
     NexusLauncherIcons \
     HelpRtc \
