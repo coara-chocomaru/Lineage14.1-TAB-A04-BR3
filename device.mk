@@ -6,7 +6,7 @@ TARGET_IS_TABLET := true
 TARGET_NO_TELEPHONY := true
 TARGET_HAS_NO_RADIO := true
 LOCAL_PATH := device/sts/a04br3
-
+PRODUCT_PACKAGES += custom_package_filter
 PRODUCT_BUILD_RECOVERY_IMAGE := true
 PRODUCT_BUILD_SYSTEM_IMAGE := true
 PRODUCT_BUILD_BOOT_IMAGE := true
@@ -155,8 +155,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/zm:system/bin/zm
 
 PRODUCT_PACKAGES += lights.mt8167
-PRODUCT_PACKAGES += custom_package_filter
-
 
 # Audio
 PRODUCT_COPY_FILES += \
