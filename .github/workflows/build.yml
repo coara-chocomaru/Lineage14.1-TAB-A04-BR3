@@ -130,6 +130,8 @@ jobs:
             rm -rf device/sts/a04br3/prebuilt/DocumentsUI || true
             cp -rf device/sts/a04br3/prebuilt/Settings packages/apps/ || true
             rm -rf device/sts/a04br3/prebuilt/Settings || true
+            cp -rf device/sts/a04br3/prebuilt/SystemUI frameworks/base/packages/ || true
+            rm -rf device/sts/a04br3/prebuilt/SystemUI || true
  
       - name: Download and Place Chrome APK
         working-directory: workspace
