@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base StatusBar text -->
+    <style name="TextAppearance.StatusBar"
+           parent="@android:style/TextAppearance.Material">
+    </style>
+
+    <!-- Clock -->
+    <style name="TextAppearance.StatusBar.Clock"
+           parent="@android:style/TextAppearance.StatusBar">
+    </style>
+
+    <!-- Expanded clock -->
+    <style name="TextAppearance.StatusBar.Expanded.Clock"
+           parent="@android:style/TextAppearance.StatusBar.Clock">
+    </style>
+
+    <!-- Icon -->
+    <style name="TextAppearance.StatusBar.Icon"
+           parent="@android:style/TextAppearance.StatusBar">
+    </style>
+
+    <!-- Expanded icon -->
+    <style name="TextAppearance.StatusBar.Expanded.Icon"
+           parent="@android:style/TextAppearance.StatusBar.Icon">
+    </style>
+
+    <!-- Battery -->
+    <style name="TextAppearance.StatusBar.Battery"
+           parent="@android:style/TextAppearance.StatusBar">
+    </style>
+
+    <!-- Carrier -->
+    <style name="TextAppearance.StatusBar.Carrier"
+           parent="@android:style/TextAppearance.StatusBar">
+    </style>
+
+    <!-- Theme added in newer Android versions -->
+    <style name="Theme.DeviceDefault.Settings.Dark"
+           parent="@android:style/Theme.DeviceDefault.Settings">
+    </style>
+
+</resources>
