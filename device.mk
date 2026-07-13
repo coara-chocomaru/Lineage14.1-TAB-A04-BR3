@@ -22,7 +22,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.secure=0 \
     ro.debuggable=1 \
     ro.boot.wificountrycode=JP \
-    security.perf_harden=1 \
+    security.perf_harden=0 \
     ro.config.donot_nosim=true \
     persist.radio.no_wait_for_card=1 \
     ro.radio.noril=1 \
@@ -35,7 +35,7 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.debuggable=1 \
     ro.boot.wificountrycode=JP \
     persist.bandwidth.enable=0 \
-    security.perf_harden=1 \
+    security.perf_harden=0 \
     ro.oem_unlock_supported=0 \
     ro.com.android.mobiledata=false \
     persist.service.acm.enable=0 \
@@ -56,7 +56,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
     dalvik.vm.dex2oat-filter=speed-profile \
     dalvik.vm.image-dex2oat-filter=speed-profile \
-    dalvik.vm.dex2oat-threads=3 \
+    dalvik.vm.dex2oat-threads=4 \
     dalvik.vm.dex2oat-flags=--no-watch-dog
 
 ADDITIONAL_BUILD_PROPERTIES += \
@@ -70,20 +70,20 @@ ADDITIONAL_BUILD_PROPERTIES += \
     ro.setupwizard.rotation_locked=true \
     ro.carrier=wifi-only \
     persist.bandwidth.enable=0 \
-    dalvik.vm.heapstartsize=8m \
-    dalvik.vm.heapgrowthlimit=256m \
-    dalvik.vm.heapsize=512m \
-    dalvik.vm.heaptargetutilization=0.70 \
-    dalvik.vm.heapminfree=512k \
-    dalvik.vm.heapmaxfree=8m \
+    dalvik.vm.heapstartsize=4m \
+    dalvik.vm.heapgrowthlimit=192m \
+    dalvik.vm.heapsize=384m \
+    dalvik.vm.heaptargetutilization=0.75 \
+    dalvik.vm.heapminfree=2m \
+    dalvik.vm.heapmaxfree=4m \
     dalvik.vm.checkjni=false \
-    ro.hwui.texture_cache_size=48 \
-    ro.hwui.layer_cache_size=32 \
-    ro.hwui.path_cache_size=16 \
+    ro.hwui.texture_cache_size=40 \
+    ro.hwui.layer_cache_size=24 \
+    ro.hwui.path_cache_size=12 \
     ro.hwui.gradient_cache_size=1 \
     ro.hwui.drop_shadow_cache_size=4 \
     ro.hwui.r_buffer_cache_size=4 \
-    ro.hwui.texture_cache_flushrate=0.50 \
+    ro.hwui.texture_cache_flushrate=0.40 \
     ro.hwui.text_small_cache_width=1024 \
     ro.hwui.text_small_cache_height=512 \
     ro.hwui.text_large_cache_width=1280 \
@@ -148,10 +148,10 @@ PRODUCT_PACKAGES += \
     mkfs.f2fs \
     make_ext4fs
 
-PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+# PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/media/bootanimation.zip
 
-PRODUCT_COPY_FILES += \
+# PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/bootanimation.zip:system/media/bootanimation.zip
 
 #zram test
