@@ -154,9 +154,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/zm:system/bin/zm
 
-PRODUCT_PACKAGES += \
-    lights.mt8167 \
-    custom_package_filter
+PRODUCT_PACKAGES += lights.mt8167
+PRODUCT_PACKAGES += custom_package_filter
+
 
 # Audio
 PRODUCT_COPY_FILES += \
