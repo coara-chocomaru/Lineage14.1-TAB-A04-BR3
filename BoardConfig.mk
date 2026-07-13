@@ -69,7 +69,7 @@ BOARD_USE_SOFT_GATEKEEPER := true
 WITH_DEXPREOPT := true
 WITH_DEXPREOPT_PIC := true
 PRODUCT_DEX_PREOPT_BOOT_FLAGS := --compiler-filter=speed-profile
-PRODUCT_DEX_PREOPT_DEFAULT_FLAGS := --compiler-filter=speed-profile
+PRODUCT_DEX_PREOPT_DEFAULT_FLAGS := --compiler-filter=speed
 #DISABLE_DEXPREOPT := true
 #DONT_DEXPREOPT_PREBUILTS := true
 #DEX_PREOPT_DEFAULT := nostripping
