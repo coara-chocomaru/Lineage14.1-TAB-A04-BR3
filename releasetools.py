@@ -7,7 +7,7 @@ def IncrementalOTA_InstallEnd(info):
     OTA_InstallEnd(info, info.target_zip)
 
 def AddImage(info, input_zip, basename, dest):
-    path = "RADIO/" + basename
+    path = basename
     if path not in input_zip.namelist():
         print("Warning: %s not found in target_files; skipping" % path)
         return
