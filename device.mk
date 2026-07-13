@@ -58,10 +58,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.image-dex2oat-filter=speed-profile \
     dalvik.vm.dex2oat-threads=4 \
     dalvik.vm.dex2oat-flags=--no-watch-dog \
-    pm.dexopt.first-boot=speed \
-    pm.dexopt.install=speed \
-    pm.dexopt.bg-dexopt=speed
-
+    pm.dexopt.first-boot=quicken \
+    pm.dexopt.boot=verify \
+    pm.dexopt.install=speed-profile \
+    pm.dexopt.bg-dexopt=speed-profile \
+    pm.dexopt.ab-ota=speed-profile \
+    pm.dexopt.inactive=verify \
+    pm.dexopt.shared=speed
 
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.build.selinux=0 \
