@@ -162,16 +162,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml
 
-TARGET_LD_SHIM_LIBS += \
-    /system/vendor/lib/hw/camera.mt8167.so|libshim_mt8167compat.so \
-    /system/vendor/lib/libcam_utils.so|libshim_mt8167compat.so \
-    /system/lib/libandroid_runtime.so|libshim_mt8167compat.so
-
-TARGET_LD_SHIM_LIBS += \
-    /system/vendor/lib64/hw/camera.mt8167.so|libshim_mt8167compat.so \
-    /system/vendor/lib64/libcam_utils.so|libshim_mt8167compat.so \
-    /system/lib64/libandroid_runtime.so|libshim_mt8167compat.so
-
 PRODUCT_PACKAGES += \
     com.google.android.media.effects \
     GoogleServicesFramework \
