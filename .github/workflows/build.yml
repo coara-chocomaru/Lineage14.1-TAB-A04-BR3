@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST_URL: 'https://github.com/crdroidandroid/android.git'
-  MANIFEST_BRANCH: '7.1'
+  MANIFEST_URL: 'https://github.com/ResurrectionRemix/platform_manifest.git'
+  MANIFEST_BRANCH: 'nougat'
   DEVICE_NAME: 'a04br3'
   MAKEFILE_NAME: 'lineage_a04br3'
   BUILD_TARGET: 'bacon'
