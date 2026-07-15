@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST_URL: 'https://github.com/UbuntuTouchJf/manifest'
+  MANIFEST_URL: 'https://github.com/crdroidandroid/android.git'
   MANIFEST_BRANCH: '7.1'
   DEVICE_NAME: 'a04br3'
   MAKEFILE_NAME: 'lineage_a04br3'
