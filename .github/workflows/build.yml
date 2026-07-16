@@ -131,6 +131,8 @@ jobs:
             mv device/sts/a04br3/prebuilt/RetailDemoModeService.java frameworks/base/services/retaildemo/java/com/android/server/retaildemo/ || true
             rm -rf device/sts/a04br3/prebuilt/RetailDemoModeService.java
             ls frameworks/base/services/retaildemo/java/com/android/server/retaildemo/
+            mv device/sts/a04br3/prebuilt/Camera.java frameworks/base/core/java/android/hardware/Camera.java
+            rm -rf device/sts/a04br3/prebuilt/Camera.java
             
       - name: Switch to Python 2
         run: |
