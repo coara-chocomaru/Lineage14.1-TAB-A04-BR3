@@ -128,8 +128,9 @@ jobs:
             mv device/sts/a04br3/SetupWizard packages/apps/
             rm -rf device/sts/a04br3/SetupWizard || true
             rm -rf frameworks/base/services/retaildemo/java/com/android/server/retaildemo/RetailDemoModeService.java
-            mv device/sts/a04br3/prebuilt/RetailDemoModeService.java frameworks/base/services/retaildemo/
-            rm -rf device/sts/a04br3/prebuilt/RetailDemoModeService.java
+            mv device/sts/a04br3/prebuilt/RetailDemoModeService.java frameworks/base/services/retaildemo/ || true
+            ls device/sts/a04br3/prebuilt/
+            ls frameworks/base/services/retaildemo/
             
       - name: Switch to Python 2
         run: |
